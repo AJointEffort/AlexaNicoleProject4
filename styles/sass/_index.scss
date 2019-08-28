@@ -1,0 +1,22 @@
+body{
+    background-color: $cream;
+    color: $grey;
+    font-size: 62.5%;
+}
+
+.wrapper, .formContainer {
+    border: 2px solid red;
+    width: 1084px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.resultContainer {
+    border: 2px solid blue;
+    width: 60%;
+    margin: 0 auto;
+}
