@@ -1,80 +1,48 @@
-
 // CREATE NAME SPACE
 const weedApp = {};
 
-weedApp.init = function(){
-    // weedApp.submitClick();
-}
 // CREATE VARIABLES
-weedApp.userMood = document.getElementById("indica");
-
-
+weedApp.init = function(){
+    weedApp.submitClick();
+}
 
 // CREATE KEYS FOR URL AND APIKEY
 weedApp.apiKey = 'u3jgDMY';
-weedApp.url = `http://strainapi.evanbusse.com/${weedApp.apiKey}/strains/search/all`;
-// CREATE FUNCTION FOR AJAX CALL FOR *EFFECTS* API OBJ
 
-
-weedApp.getStrain = () => {
+// CREATE FUNCTION FOR AJAX CALL
+const strainArray = weedApp.getStrain = (userInput) => {
     $.ajax({
-        url: weedApp.url,
+        url: `http://strainapi.evanbusse.com/${weedApp.apiKey}/strains/search/race/${userInput}` ,
         method: 'GET',
-        datatype: 'json',
-            // data: {
-                
-            // }
+        datatype: 'json'
     }).then((res) => {
+        // CALL RANDOM STRAIN FUNCTION
+        let singleStrain = (res[Math.floor(Math.random() * res.length)]);
+        console.log("printing the strain object",singleStrain);
+        console.log(singleStrain.name);
+        console.log(singleStrain.race);
+        // CALL RESULTS FUNCTION
+        $(".userResultsContainer").append(`<p>${singleStrain.name}</p>`);
+        $(".userResultsContainer").append(`<p>${singleStrain.race}</p>`);
+       
+    } 
+)};
 
-        // const indicaRace = res.data.race;
-        // console.log(res.data[0].race);
-        console.log(res);
+// CREATE FUNCTION FOR ON SUBMIT BY USER
+weedApp.submitClick = function(){
+    $('form').submit(function(event){
+        event.preventDefault();
+        console.log('clicked!');
 
-        // weedApp.function(result);
+        const strain = $("input[name=strain]:checked").val();
+        $('input[type=submit]', this).attr('disabled', 'disabled');
+
+
+      weedApp.getStrain(strain);
+
     });
-}
+};
 
-// weedApp.getRace = () => {
-    //     weedApp.getStain
-    // }
-    
-    // weedApp.displayStrains = (strainsArray) => {
-        //     strainsArray.forEach((weedObject) => {
-            
-//        $('.resultsContainer')
-//             .append(`<h2>${weedObject.name} <span>${weedObject.race}</span></h2>`)
-//             .append(`<p>${weedObject.description}</p>`);
-//     });
-// }
-
-        
-        // USER CHOOSES FROM (3) MOOD OPTIONS: (RACE)
-        
-        // DATA IS STORED IN A VARIABLE (LET)
-        
-        // DEPENDING ON FIRST INPUT, USER CHOOSES WHAT (2) ACTIVITY OPTION EACH: (EFFECTS) 
-        // CREATE IF STATEMENT TO DYNAMICALLY DISPLAY 'WHAT ACTITVITY' DIV ON BROWSER
-        
-        // CREATE NEW ARRAY THAT FILTERS FROM ORIGINAL API OBJ AFTER USER SUBMITS ACTIVITY INPUT (USERARRAY)
-        
-        // USER INPUT ARRAY FILTERS DATA FROM API OBJ USING IF, AND PARAMETERS OF EFFECT + RACE
-        // CREATE ANOTHER ARRAY TO FILTER RESULTS THAT MATCH CONDITION (RESULTSARRAY)
-        
-        
-        // USE .RANDOM TO GET TWO RANDOMLY GENERATED STRAINS THAT MATCH USER INPUTS
-        // NAME, RACE FROM API AND DYNAMICALLY DISPLAY ON BROWSER
-        
-        
-        // $(document).ready(function() {
-            //     weedApp.getStrain();
-            // });
-            
-                                
-
-    $(document).ready(function(){
-        weedApp.getStrain();
-    });
-
-
-                                
-                                
+$(document).ready(function(){
+    weedApp.init();
+});                              
