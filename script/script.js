@@ -22,26 +22,32 @@ const strainArray = weedApp.getStrain = (userInput) => {
         console.log(singleStrain.name);
         console.log(singleStrain.race);
         // CALL RESULTS FUNCTION
-        $(".userResultsContainer").append(`<p>${singleStrain.name}</p>`);
-        $(".userResultsContainer").append(`<p>${singleStrain.race}</p>`);
+        $(".userResultsContainer").append(`<img src="images/${userInput}.jpg">`);
+        $(".userResultsContainer").append(`<p><span class="resultSpan">Strain:</span> ${singleStrain.name}</p>`);
+        $(".userResultsContainer").append(`<p><span class="resultSpan">Race: </span> ${singleStrain.race}</p>`);
        
     } 
 )};
 
 // CREATE FUNCTION FOR ON SUBMIT BY USER
-weedApp.submitClick = function(){
-    $('form').submit(function(event){
+weedApp.submitClick = function () {
+    $('form').submit(function (event) {
         event.preventDefault();
         console.log('clicked!');
 
         const strain = $("input[name=strain]:checked").val();
-        $('input[type=submit]', this).attr('disabled', 'disabled');
 
+        if ($("input[name=strain]:checked").length) {
+            $('input[type=submit]', this).attr('disabled', 'disabled');
+        } else if (!$("input[name=strain]:checked").length) {
+            alert(`Are you already high? Must choose one option before submitting!`);
+        };
 
-      weedApp.getStrain(strain);
+        weedApp.getStrain(strain);
 
     });
 };
+
 
 $(document).ready(function(){
     weedApp.init();

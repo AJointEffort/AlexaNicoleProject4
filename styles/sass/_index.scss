@@ -4,19 +4,103 @@ body{
     font-size: 62.5%;
 }
 
-.wrapper, .formContainer {
-    border: 2px solid red;
+.headerWrapper, .formContainer {
     width: 1084px;
     max-width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
     font-size: 4rem;
+    text-align: center;
 }
 
-.resultContainer {
-    border: 2px solid blue;
-    width: 60%;
+
+.formContainer{
+    h2{
+        font-size:2rem;
+        width:80%;
+        margin:0 auto;
+        text-transform: uppercase;
+        letter-spacing: .05rem;
+    }
+
+    p{
+        font-size: 1.6rem;
+    }
+}
+
+
+
+.mood{
+    display:flex;
+    // flex-direction:column;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+label{
+    background:pink;
+    padding:3% 5%;
+    border-radius:3%;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size:1.6rem;
+    width:80%;
+    margin:1%;
+    cursor: pointer;
+    border:1px solid transparent;
+    
+    &:hover{
+        background:fuchsia;
+        transition:.3s;
+        border:1px solid black;
+    }
+}
+
+.hideInput{
+    visibility: hidden;
+}
+
+input[type=radio]:checked + label{
+    background:fuchsia;
+    transition:.3s;
+    border:1px solid black;
+}
+
+.submitButton{
+    font-size:1.8rem;
+    border-radius:5%;
+    margin:5%;
+    text-transform: uppercase;
+    border:none;
+    padding:5% 10%;
+    border:1px solid transparent;
+    
+    &:hover{
+        background:yellow;
+        transition:.3s;
+        border:1px solid red;
+    }
+}
+
+.resultContainer{
+    width:80%;
     margin: 0 auto;
+    margin-top:10%;
+    text-align: center;
+    font-size:2rem;
+    padding:10%;
+    border:1px solid green;
+
+    .resultSpan{
+        color:blue;
+    }
+}
+
+img{
+    width:100%;
 }

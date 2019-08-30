@@ -10,7 +10,7 @@
 <body>
 
 <header>
-    <div class="wrapper">
+    <div class="headerWrapper">
         <h1>How to Weed!</h1>
     </div>
 </header>
@@ -21,26 +21,39 @@
         <p>Select <span> one</span> option below</p>
         
         <form action="">
-            <input type="radio" name="strain" id="indica" value="indica">
-            <label for="indica">Content & Relaxed</label>
-            
-            <input type="radio" name="strain" id="sativa" value="sativa">
-            <label for="sativa">Creative & Energetic</label>
-            
-            <input type="radio" name="strain" id="hybrid" value="hybrid">
-            <label for="hybrid">Focused & Tranquil</label>
-            
-            <input type="submit" name="submit" value="light up">
+            <fieldset class="mood">
+                <input type="radio" name="strain" class="hideInput" id="indica" value="indica">
+                <label for="indica">Content & Relaxed</label>
+                
+                <input type="radio" name="strain" class="hideInput" id="sativa" value="sativa">
+                <label for="sativa">Creative & Energetic</label>
+                
+                <input type="radio" name="strain" class="hideInput" id="hybrid" value="hybrid">
+                <label for="hybrid">Focused & Tranquil</label>
+                
+                <!-- <div class="submitButtonContain"> -->
+                    <input type="submit" name="submit" class="submitButton"value="light up">
+                <!-- </div> -->
+            </fieldset>
+
+            <!-- <fieldset class ="activityIndica">
+                <input type="radio" name="indicaActivity" value="sleep"> 
+                <label for="">Sleep</label>
+
+                <input type="submit" name="submit" value="light up">
+            </fieldset>
+ -->
+
         </form>
     </div>
 
+
     <div class="resultContainer">
         <h2>Try this!</h2>
-        <img src="images/bud1.jpg"></img>
+        <!-- <img src="images/bud1.jpg"></img> -->
         <!-- this is where the results will show -->
         <div class="userResultsContainer">
-            <!-- <p class="name"></p> -->
-            <p class="race"></p>
+
         </div>
     </div>
         
