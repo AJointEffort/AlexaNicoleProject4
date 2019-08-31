@@ -1,6 +1,10 @@
 body{
-    background-color: $cream;
-    color: $grey;
+    // background-image: url("../images/space.jpg");
+    // background-position: top;
+    // background-repeat: no-repeat; 
+    // background-size: cover;
+    background-color: $green;
+    color: $yellow;
     font-size: 62.5%;
 }
 
@@ -9,15 +13,24 @@ body{
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
+    border-radius: 1px;
 }
 
 h1 {
     font-size: 4rem;
     text-align: center;
+    margin: 0;
+    font-family: $fun;
+    color:$cream;
+    letter-spacing: .08rem;
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    text-align: center;
 }
 
 
-.formContainer{
     h2{
         font-size:2rem;
         width:80%;
@@ -29,23 +42,23 @@ h1 {
     p{
         font-size: 1.6rem;
     }
+
+fieldset{
+    border:none;
 }
-
-
-
 .mood{
     display:flex;
-    // flex-direction:column;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     
 }
 
 label{
-    background:pink;
+    background: $pink;
+    color:black;
     padding:3% 5%;
-    border-radius:3%;
+    border-radius: 1px;
     text-transform: uppercase;
     letter-spacing: .1rem;
     font-size:1.6rem;
@@ -55,7 +68,7 @@ label{
     border:1px solid transparent;
     
     &:hover{
-        background:fuchsia;
+        background:$pink;
         transition:.3s;
         border:1px solid black;
     }
@@ -66,14 +79,14 @@ label{
 }
 
 input[type=radio]:checked + label{
-    background:fuchsia;
+    background:$pink;
     transition:.3s;
     border:1px solid black;
 }
 
 .submitButton{
     font-size:1.8rem;
-    border-radius:5%;
+    border-radius:1px;
     margin:5%;
     text-transform: uppercase;
     border:none;
@@ -81,26 +94,53 @@ input[type=radio]:checked + label{
     border:1px solid transparent;
     
     &:hover{
-        background:yellow;
+        background: $pink;
         transition:.3s;
-        border:1px solid red;
+        border:1px solid $pink;
     }
 }
 
 .resultContainer{
+    background-color: $cream;
+    border-radius: 20px;
     width:80%;
     margin: 0 auto;
-    margin-top:10%;
     text-align: center;
     font-size:2rem;
-    padding:10%;
-    border:1px solid green;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 
     .resultSpan{
         color:blue;
     }
 }
 
+.userResultTitle {
+    padding: 2rem;
+}
+
 img{
-    width:100%;
+    width:45%;
+}
+
+.apiRace, .apiName {
+    text-transform: capitalize;
+    padding-bottom: 2rem;
+}
+
+.resultSpan {
+    text-transform: uppercase;
+}
+
+footer{
+    background: $yellow;
+    padding:1%;
+    margin:0 auto;
+ p{
+     margin: 0a;
+     color:black;
+     text-transform: uppercase;
+     letter-spacing: .05rem;
+   
+ }
 }

@@ -166,8 +166,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 body {
-  background-color: #FFFBE2;
-  color: #3F3F3F;
+  background-color: #2d5436;
+  color: #dbb446;
   font-size: 62.5%;
 }
 
@@ -176,14 +176,24 @@ body {
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
+  border-radius: 1px;
 }
 
 h1 {
   font-size: 4rem;
   text-align: center;
+  margin: 0;
+  font-family: "Bungee Shade", cursive;
+  color: #FFFBE2;
+  letter-spacing: .08rem;
 }
 
-.formContainer h2 {
+.header-subtitle {
+  font-size: 1rem;
+  text-align: center;
+}
+
+h2 {
   font-size: 2rem;
   width: 80%;
   margin: 0 auto;
@@ -191,8 +201,12 @@ h1 {
   letter-spacing: .05rem;
 }
 
-.formContainer p {
+p {
   font-size: 1.6rem;
+}
+
+fieldset {
+  border: none;
 }
 
 .mood {
@@ -203,17 +217,19 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 label {
-  background: pink;
+  background: #ff907d;
+  color: black;
   padding: 3% 5%;
-  border-radius: 3%;
+  border-radius: 1px;
   text-transform: uppercase;
   letter-spacing: .1rem;
   font-size: 1.6rem;
@@ -224,7 +240,7 @@ label {
 }
 
 label:hover {
-  background: fuchsia;
+  background: #ff907d;
   -webkit-transition: .3s;
   transition: .3s;
   border: 1px solid black;
@@ -235,7 +251,7 @@ label:hover {
 }
 
 input[type=radio]:checked + label {
-  background: fuchsia;
+  background: #ff907d;
   -webkit-transition: .3s;
   transition: .3s;
   border: 1px solid black;
@@ -243,7 +259,7 @@ input[type=radio]:checked + label {
 
 .submitButton {
   font-size: 1.8rem;
-  border-radius: 5%;
+  border-radius: 1px;
   margin: 5%;
   text-transform: uppercase;
   border: none;
@@ -252,85 +268,54 @@ input[type=radio]:checked + label {
 }
 
 .submitButton:hover {
-  background: yellow;
+  background: #ff907d;
   -webkit-transition: .3s;
   transition: .3s;
-  border: 1px solid red;
+  border: 1px solid #ff907d;
 }
 
 .resultContainer {
+  background-color: #FFFBE2;
+  border-radius: 20px;
   width: 80%;
   margin: 0 auto;
-  margin-top: 10%;
   text-align: center;
   font-size: 2rem;
-  padding: 10%;
-  border: 1px solid green;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 
 .resultContainer .resultSpan {
   color: blue;
 }
 
-img {
-  width: 100%;
+.userResultTitle {
+  padding: 2rem;
 }
 
-@media (max-width: 320px) {
-  .mood {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  label {
-    background: pink;
-    padding: 3% 5%;
-    border-radius: 3%;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    font-size: 1.6rem;
-    width: 80%;
-    margin: 1%;
-    cursor: pointer;
-    border: 1px solid transparent;
-  }
-  label:hover {
-    background: fuchsia;
-    -webkit-transition: .3s;
-    transition: .3s;
-    border: 1px solid black;
-  }
-  .hideInput {
-    visibility: hidden;
-  }
-  input[type=radio]:checked + label {
-    background: fuchsia;
-    -webkit-transition: .3s;
-    transition: .3s;
-    border: 1px solid black;
-  }
-  .submitButton {
-    font-size: 1.8rem;
-    border-radius: 5%;
-    margin: 5%;
-    text-transform: uppercase;
-    border: none;
-    padding: 5% 10%;
-    border: 1px solid transparent;
-  }
-  .submitButton:hover {
-    background: yellow;
-    -webkit-transition: .3s;
-    transition: .3s;
-    border: 1px solid red;
-  }
+img {
+  width: 45%;
+}
+
+.apiRace, .apiName {
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+}
+
+.resultSpan {
+  text-transform: uppercase;
+}
+
+footer {
+  background: #dbb446;
+  padding: 1%;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0a;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
 }

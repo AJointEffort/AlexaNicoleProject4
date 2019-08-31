@@ -22,9 +22,10 @@ const strainArray = weedApp.getStrain = (userInput) => {
         console.log(singleStrain.name);
         console.log(singleStrain.race);
         // CALL RESULTS FUNCTION
+        $(".userResultsContainer").append(`<h2 class="userResultTitle">Try this!</h2>`)
         $(".userResultsContainer").append(`<img src="images/${userInput}.jpg">`);
-        $(".userResultsContainer").append(`<p><span class="resultSpan">Strain:</span> ${singleStrain.name}</p>`);
-        $(".userResultsContainer").append(`<p><span class="resultSpan">Race: </span> ${singleStrain.race}</p>`);
+        $(".userResultsContainer").append(`<p class="apiName"><span class="resultSpan">Strain:</span> ${singleStrain.name}</p>`);
+        $(".userResultsContainer").append(`<p class="apiRace"><span class="resultSpan">Race: </span> ${singleStrain.race}</p>`);
        
     } 
 )};
@@ -36,6 +37,12 @@ weedApp.submitClick = function () {
         console.log('clicked!');
 
         const strain = $("input[name=strain]:checked").val();
+        
+        animatedResults();
+
+        $('html, body').animate({
+            scrollTop: $('.formContainer').offset().top + $('.formContainer').height()
+        }, 400);
 
         if ($("input[name=strain]:checked").length) {
             $('input[type=submit]', this).attr('disabled', 'disabled');
@@ -48,6 +55,9 @@ weedApp.submitClick = function () {
     });
 };
 
+animatedResults = function(){
+    $('.resultContainer').css('opacity', '1').css('visibility', 'visible');
+}
 
 $(document).ready(function(){
     weedApp.init();
