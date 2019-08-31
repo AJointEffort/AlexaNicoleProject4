@@ -6,9 +6,10 @@ body{
     background-color: $green;
     color: $yellow;
     font-size: 62.5%;
+    font-family: $body;
 }
 
-.headerWrapper, .formContainer {
+.headerWrapper, .moodFormContainer {
     width: 1084px;
     max-width: 80%;
     margin: 0 auto;
@@ -23,7 +24,8 @@ h1 {
     padding: 2rem 0 1rem;
     font-family: $fun;
     color:$cream;
-    letter-spacing: .08rem;
+    letter-spacing: .5rem;
+    text-shadow: 1px 1px $pink;
 }
 
 .header-subtitle {
@@ -95,7 +97,7 @@ input[type=radio]:checked + label{
     border:1px solid black;
 }
 
-.submitButton{
+.moodButton{
     font-size:1.8rem;
     border-radius:1px;
     margin:5%;
@@ -111,6 +113,20 @@ input[type=radio]:checked + label{
     }
 }
 
+
+.activityForm{
+
+    label{
+        background:$yellow;
+        padding:2%;
+    }
+}
+
+.activityIndica{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    visibility: hidden;
+}
 .resultContainer{
     background-color: $cream;
     border-radius: 20px;
@@ -120,6 +136,7 @@ input[type=radio]:checked + label{
     font-size:2rem;
     opacity: 0;
     transition: opacity 1s ease-in;
+    visibility: hidden;
 
     .resultSpan{
         color:blue;
@@ -144,6 +161,7 @@ img{
 .resultSpan {
     text-transform: uppercase;
 }
+
 
 footer{
     background: $yellow;
