@@ -170,16 +170,10 @@ body {
   color: #dbb446;
   font-size: 62.5%;
   font-family: "Lexend Deca", sans-serif;
-<<<<<<< HEAD
   cursor: url(../../images/bud.png), auto;
 }
 
 .headerWrapper {
-=======
-}
-
-.headerWrapper, .moodFormContainer {
->>>>>>> df22fbada6df9c26fcc4d58c86b375f8fcf55d9c
   width: 1084px;
   max-width: 80%;
   height: 100vh;
@@ -243,14 +237,8 @@ h1 {
   text-align: center;
   margin: 5% 0%;
   font-family: "Bungee Shade", cursive;
-<<<<<<< HEAD
   color: #2d5436;
   letter-spacing: .5rem;
-=======
-  color: #FFFBE2;
-  letter-spacing: .5rem;
-  text-shadow: 1px 1px #ff907d;
->>>>>>> df22fbada6df9c26fcc4d58c86b375f8fcf55d9c
 }
 
 .headerSubtitle {
@@ -354,15 +342,11 @@ input[type=radio]:checked + label {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .moodButtonContain .moodButton {
   font-family: "Bungee Shade", cursive;
   letter-spacing: .3rem;
   background: #2d5436;
   color: #dbb446;
-=======
-.moodButton {
->>>>>>> df22fbada6df9c26fcc4d58c86b375f8fcf55d9c
   font-size: 1.8rem;
   border-radius: 2px;
   margin: 0 auto;
@@ -373,29 +357,12 @@ input[type=radio]:checked + label {
   cursor: url(../../images/bud.png), auto;
 }
 
-<<<<<<< HEAD
 .moodButtonContain .moodButton:hover {
   background: #FFFBE2;
   color: #2d5436;
   border: 2px solid #dbb446;
-=======
-.moodButton:hover {
-  background: #ff907d;
->>>>>>> df22fbada6df9c26fcc4d58c86b375f8fcf55d9c
   -webkit-transition: .3s;
   transition: .3s;
-}
-
-.activityForm label {
-  background: #dbb446;
-  padding: 2%;
-}
-
-.activityIndica {
-  opacity: 0;
-  -webkit-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
-  visibility: hidden;
 }
 
 .resultContainer {
@@ -409,7 +376,6 @@ input[type=radio]:checked + label {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
-<<<<<<< HEAD
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -421,9 +387,6 @@ input[type=radio]:checked + label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-=======
-  visibility: hidden;
->>>>>>> df22fbada6df9c26fcc4d58c86b375f8fcf55d9c
 }
 
 .resultContainer .resultSpan {
