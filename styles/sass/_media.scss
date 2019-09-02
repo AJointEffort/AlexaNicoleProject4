@@ -135,17 +135,34 @@
 }
 
 @media(max-width: 500px) { 
+
+    html{
+        font-size:80%;
+    }
     .headerSubtitle {
         width: 85%;
         font-size: 1.6rem;
     }
+
+    .formTitle{
+        font-size: 2rem;
+    }
+
+    .moodFormContainer p{
+        font-size:1.5rem;
+        padding:.5rem;
+    }
+
+        
+        
 }
 
 @media(max-width: 480px) { 
 
-    html{
-        font-size:95%;
+    body{
+        font-size:75%;
     }
+
     .startButton {
         width:100%;
         margin:0 auto;
@@ -160,12 +177,6 @@
     
     .disclaimer{
         padding-top:0;
-    }
-
-
-    h1 {
-        font-size: 5rem;
-        padding-top: 3rem;
     }
 
     .headerSubtitle {
@@ -187,9 +198,9 @@
 
 @media(max-width: 350px){
     html{
-        font-size:85%;
+        font-size:60%;
     }
-
+    
     footer p{
      font-size:1rem;
     }
