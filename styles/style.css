@@ -166,59 +166,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 body {
-  background-color: #2d5436;
+  background-color: #FFFBE2;
   color: #dbb446;
   font-size: 62.5%;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: url(../../images/bud.png), auto;
 }
 
-.headerWrapper, .formContainer {
+.headerWrapper {
   width: 1084px;
   max-width: 80%;
+  height: 100vh;
   margin: 0 auto;
   text-align: center;
   border-radius: 1px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-align: center;
-  margin: 0;
-  padding: 2rem 0 1rem;
-  font-family: "Bungee Shade", cursive;
-  color: #FFFBE2;
-  letter-spacing: .08rem;
-}
-
-.header-subtitle {
-  width: 60%;
-  font-size: 2rem;
-  text-align: center;
-  padding: 1rem;
-  margin: 0 auto;
-  text-transform: uppercase;
-  letter-spacing: .05rem;
-}
-
-.formTitle {
-  font-size: 3rem;
-  width: 90%;
-  margin: 0 auto;
-  padding: 2rem 0 1rem;
-  text-transform: uppercase;
-  letter-spacing: .05rem;
-  font-family: "Bungee Shade", cursive;
-  color: #FFFBE2;
-}
-
-p {
-  font-size: 1.6rem;
-}
-
-fieldset {
-  border: none;
-}
-
-.mood {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,28 +193,137 @@ fieldset {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0;
 }
 
-label {
-  background: #ff907d;
+.headerWrapper p {
+  font-size: 1.3rem;
+}
+
+.startButton {
+  width: 100%;
+  margin: 1%;
+  padding: 1rem;
+}
+
+.startButton a {
+  background: #2d5436;
   color: #FFFBE2;
-  padding: 3% 5%;
-  border-radius: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  font-family: "Bungee Shade", cursive;
+  font-size: 1.6rem;
+  letter-spacing: .3rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: url(../../images/bud.png), auto;
+}
+
+.startButton a:hover {
+  background: #dbb446;
+  color: #2d5436;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 1px solid #FFFBE2;
+}
+
+em {
+  font-style: italic;
+  text-shadow: -2px 1px #2d5436;
+}
+
+h1 {
+  font-size: 7rem;
+  text-align: center;
+  margin: 5% 0%;
+  font-family: "Bungee Shade", cursive;
+  color: #2d5436;
+  letter-spacing: .5rem;
+}
+
+.headerSubtitle {
+  width: 45%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.moodFormContainer {
+  width: 1584px;
+  max-width: 98%;
+  height: 100vh;
+  margin: 0 auto 2rem;
+  text-align: center;
+  border-radius: 5px;
+  background: #2d5436;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.moodFormContainer .formTitle {
+  font-size: 3rem;
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-family: "Bungee Shade", cursive;
+  color: #FFFBE2;
+}
+
+.moodFormContainer p {
+  font-size: 1.6rem;
+  margin: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.mood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2%;
+}
+
+.moodChoice {
+  background: #dbb446;
+  color: #FFFBE2;
+  padding: 1rem 2rem;
+  border-radius: 2px;
   text-transform: uppercase;
   letter-spacing: .1rem;
   font-size: 1.6rem;
-  width: 80%;
   margin: 1%;
-  cursor: pointer;
   border: 1px solid transparent;
+  cursor: url(../../images/bud.png), auto;
 }
 
-label:hover {
-  background: #ffbeb3;
+.moodChoice:hover {
+  background: #FFFBE2;
+  color: #dbb446;
   -webkit-transition: .3s;
   transition: .3s;
-  border: 1px solid #ff907d;
+  border: 1px solid #dbb446;
 }
 
 .hideInput {
@@ -261,58 +331,114 @@ label:hover {
 }
 
 input[type=radio]:checked + label {
-  background: #ff907d;
+  background: #FFFBE2;
+  color: #dbb446;
   -webkit-transition: .3s;
   transition: .3s;
-  border: 1px solid black;
+  border: 2px solid cream;
 }
 
-.submitButton {
+.moodButtonContain {
+  width: 100%;
+}
+
+.moodButtonContain .moodButton {
+  font-family: "Bungee Shade", cursive;
+  letter-spacing: .3rem;
+  background: #2d5436;
+  color: #dbb446;
   font-size: 1.8rem;
-  border-radius: 1px;
-  margin: 5%;
+  border-radius: 2px;
+  margin: 0 auto;
   text-transform: uppercase;
-  border: none;
-  padding: 5% 10%;
-  border: 1px solid transparent;
+  padding: 2% 5%;
+  display: block;
+  border: 2px solid #dbb446;
+  cursor: url(../../images/bud.png), auto;
 }
 
-.submitButton:hover {
-  background: #ff907d;
+.moodButtonContain .moodButton:hover {
+  background: #FFFBE2;
+  color: #2d5436;
+  border: 2px solid #dbb446;
   -webkit-transition: .3s;
   transition: .3s;
-  border: 1px solid #ff907d;
 }
 
 .resultContainer {
   background-color: #FFFBE2;
-  border-radius: 20px;
-  width: 80%;
-  margin: 0 auto;
+  border-radius: 5px;
+  width: 98%;
+  height: 99vh;
+  margin: 0 auto 1rem;
   text-align: center;
   font-size: 2rem;
   opacity: 0;
   -webkit-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .resultContainer .resultSpan {
-  color: blue;
+  color: #2d5436;
+}
+
+.resultContainer a {
+  background: #2d5436;
+  color: #FFFBE2;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .8rem;
+  font-family: "Bungee Shade", cursive;
+  font-size: 1.6rem;
+  letter-spacing: .3rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: url(../../images/bud.png), auto;
+}
+
+.resultContainer a:hover {
+  background: #dbb446;
+  color: #2d5436;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 1px solid #FFFBE2;
+}
+
+.userResultsContainer {
+  margin-bottom: 1.5rem;
 }
 
 .userResultTitle {
-  padding: 2rem;
   font-family: "Bungee Shade", cursive;
+  color: #2d5436;
+  margin: 0;
   font-size: 3rem;
+  padding-bottom: 1.5rem;
+  font-size: 4rem;
+  letter-spacing: .5rem;
 }
 
 img {
-  width: 45%;
+  width: 25%;
+  padding: 1%;
+  border: 1px solid #2d5436;
+  border-radius: 3px;
 }
 
 .apiRace, .apiName {
   text-transform: capitalize;
-  padding-bottom: 2rem;
+  margin: .5rem 0;
 }
 
 .resultSpan {
@@ -326,8 +452,203 @@ footer {
 }
 
 footer p {
-  margin: 0a;
+  margin: 0;
   color: black;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: .05rem;
+  text-align: center;
+}
+
+footer a {
+  color: #2d5436;
+}
+
+.iconCredits {
+  color: #2d5436;
+  margin-top: .5rem;
+  text-align: center;
+}
+
+@media (max-width: 1210px) {
+  .headerSubtitle {
+    width: 45%;
+    font-size: 2rem;
+  }
+  .disclaimer {
+    padding: .5rem 0 0;
+  }
+}
+
+@media (max-width: 1165px) {
+  .headerSubtitle {
+    width: 50%;
+    font-size: 2rem;
+  }
+  .disclaimer {
+    padding: .5rem 0 0;
+  }
+}
+
+@media (max-width: 1048px) {
+  h1 {
+    margin-top: 3%;
+  }
+  .headerSubtitle {
+    padding: 0;
+    width: 50%;
+    font-size: 2rem;
+  }
+  .disclaimer {
+    padding: .5rem 0 0;
+  }
+  .moodFormContainer {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 971px) {
+  .headerSubtitle {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .headerSubtitle {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 874px) {
+  .headerSubtitle {
+    width: 50%;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 783px) {
+  .headerSubtitle {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  .resultContainer {
+    height: 99vh;
+  }
+  .resultContainer a {
+    font-size: 1.8rem;
+  }
+  .resultContainer a:hover {
+    background: #dbb446;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border: 1px solid #FFFBE2;
+  }
+  .userResultsContainer {
+    margin-bottom: 3rem;
+  }
+  img {
+    width: 40%;
+    padding: 2%;
+  }
+}
+
+@media (max-width: 736px) {
+  .headerSubtitle {
+    width: 55%;
+    font-size: 1.5rem;
+  }
+  .disclaimer {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .mood {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .moodChoice {
+    width: 70%;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 667px) {
+  .formTitle {
+    padding-top: .5rem;
+  }
+  .moodChoice {
+    width: 90%;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+  }
+  .mood {
+    padding: .5rem;
+  }
+  .moodButtonContain {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .headerSubtitle {
+    width: 85%;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 95%;
+  }
+  .startButton {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 0rem;
+  }
+  .startButton a {
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+  }
+  .disclaimer {
+    padding-top: 0;
+  }
+  h1 {
+    font-size: 5rem;
+    padding-top: 3rem;
+  }
+  .headerSubtitle {
+    padding: 2rem 0 1rem;
+    width: 85%;
+    font-size: 1.4rem;
+  }
+  .disclaimer {
+    font-size: .6rem;
+    padding: .5rem 0 0;
+  }
+  .startButton {
+    margin: 3%;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 85%;
+  }
+  footer p {
+    font-size: 1rem;
+  }
 }
